@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<!DOCTYPE plugin PUBLIC "-//JPF//Java Plug-in Manifest 1.0" "http://jpf.sourceforge.net/plugin_1_0.dtd">
+<plugin id="com.first" version="0.0.5">
+	<requires>
+		<import plugin-id="com.second" />
+	</requires>
+	<runtime>
+		<library id="codecolorer" path="classes/" type="code">
+			<doc caption="API documentation">
+				<doc-ref path="api/index.html" caption="javadoc" />
+			</doc>
+		</library>
+		<library id="java2html" path="lib/java2html.jar" type="code">
+			<doc caption="Java2html Library by Markus Gebhard">
+				<doc-ref path="http://www.java2html.de"
+					caption="Java2Html Homepage" />
+			</doc>
+		</library>
+		<library type="resources" path="icons/" id="icons" />
+	</runtime>
+	<extension plugin-id="com.second" point-id="demo"
+		id="FirstPlugin">
+		<parameter id="class"
+			value="com.first.FirstPlugin" />
+		<parameter id="name" value="Code Demo" />
+		<parameter id="description"
+			value="Tool to call first plugin" />
+	</extension>
+</plugin>
